@@ -1,0 +1,18 @@
+printlist([]).
+printlist([X|List]) :- write(X),nl, printlist(List).
+
+OUTPUT:
+printlist[1,2,3,4]
+
+append([],L,L).
+append([X|L1],L2,[X|L3]) :- append(L1,L2,L3).
+
+OUTPUT:
+append([1,2,3,4],[5],x).
+
+member(X,List):- delete(X,List,_).
+delete(X,[X|Tail],Tail). delete(X,[Y|Tail1],[Y|Tail2]):-
+delete(X,Tail1,Tail2).
+
+OUTPUT:
+member(z,[a,b,c,d]).
